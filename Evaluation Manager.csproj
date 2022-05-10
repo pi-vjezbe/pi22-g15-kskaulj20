@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DBLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DBLayer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,46 +62,18 @@
     <Compile Include="FrmStudents.Designer.cs">
       <DependentUpon>FrmStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="kskaulj20\DBLayer\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
-    <Compile Include="kskaulj20\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kskaulj20\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kskaulj20\FrmStudents.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kskaulj20\FrmStudents.Designer.cs">
-      <DependentUpon>FrmStudents.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kskaulj20\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
-    <Compile Include="kskaulj20\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
-    <Compile Include="kskaulj20\Program.cs" />
-    <Compile Include="kskaulj20\Properties\AssemblyInfo.cs" />
-    <Compile Include="kskaulj20\Properties\Resources.Designer.cs" />
-    <Compile Include="kskaulj20\Properties\Settings.Designer.cs" />
-    <Compile Include="kskaulj20\Teacher.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Teacher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="teacher.cs" />
+    <Compile Include="Repositories\StudentRepository.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStudents.resx">
       <DependentUpon>FrmStudents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="kskaulj20\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="kskaulj20\FrmStudents.resx">
-      <DependentUpon>FrmStudents.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="kskaulj20\obj\Debug\Evaluation_Manager.FrmLogin.resources" />
-    <EmbeddedResource Include="kskaulj20\obj\Debug\Evaluation_Manager.FrmStudents.resources" />
-    <EmbeddedResource Include="kskaulj20\obj\Debug\Evaluation_Manager.Properties.Resources.resources" />
-    <EmbeddedResource Include="kskaulj20\Properties\Resources.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,69 +83,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="kskaulj20\.git\COMMIT_EDITMSG" />
-    <None Include="kskaulj20\.git\config" />
-    <None Include="kskaulj20\.git\description" />
-    <None Include="kskaulj20\.git\FETCH_HEAD" />
-    <None Include="kskaulj20\.git\HEAD" />
-    <None Include="kskaulj20\.git\hooks\applypatch-msg.sample" />
-    <None Include="kskaulj20\.git\hooks\commit-msg.sample" />
-    <None Include="kskaulj20\.git\hooks\fsmonitor-watchman.sample" />
-    <None Include="kskaulj20\.git\hooks\post-update.sample" />
-    <None Include="kskaulj20\.git\hooks\pre-applypatch.sample" />
-    <None Include="kskaulj20\.git\hooks\pre-commit.sample" />
-    <None Include="kskaulj20\.git\hooks\pre-merge-commit.sample" />
-    <None Include="kskaulj20\.git\hooks\pre-push.sample" />
-    <None Include="kskaulj20\.git\hooks\pre-rebase.sample" />
-    <None Include="kskaulj20\.git\hooks\pre-receive.sample" />
-    <None Include="kskaulj20\.git\hooks\prepare-commit-msg.sample" />
-    <None Include="kskaulj20\.git\hooks\push-to-checkout.sample" />
-    <None Include="kskaulj20\.git\hooks\update.sample" />
-    <None Include="kskaulj20\.git\index" />
-    <None Include="kskaulj20\.git\info\exclude" />
-    <None Include="kskaulj20\.git\logs\HEAD" />
-    <None Include="kskaulj20\.git\logs\refs\heads\master" />
-    <None Include="kskaulj20\.git\logs\refs\remotes\origin\master" />
-    <None Include="kskaulj20\.git\objects\06\1e8dcba88dbbedc7eb8989f2a33370457c6141" />
-    <None Include="kskaulj20\.git\objects\19\3aecc675e7d4600fde2d37cf350bce7a056948" />
-    <None Include="kskaulj20\.git\objects\1a\f7de150c99c12dd67a509fe57c10d63e4eeb04" />
-    <None Include="kskaulj20\.git\objects\1f\f0c423042b46cb1d617b81efb715defbe8054d" />
-    <None Include="kskaulj20\.git\objects\21\9e31db6e1950779220f973d8fb46a794b88fbd" />
-    <None Include="kskaulj20\.git\objects\39\645652af62950ebf3b28ec3a5400dcec30b1c4" />
-    <None Include="kskaulj20\.git\objects\3f\ddc187bd6673c35ebb07c5ecda07061ad9defb" />
-    <None Include="kskaulj20\.git\objects\43\12c2a7414da7ddf277a7c1a9a5a389fb8e12e0" />
-    <None Include="kskaulj20\.git\objects\51\3672649bdd0c5723c848d3788ab92fc65fa487" />
-    <None Include="kskaulj20\.git\objects\52\93eda2f7b1f9c0eeec3b1918210e3e256b646b" />
-    <None Include="kskaulj20\.git\objects\6e\a093e55da6b77b63089e78386bfb3329c7789c" />
-    <None Include="kskaulj20\.git\objects\87\0a82180383373c59ef22cf063a0a3f07a0a7e9" />
-    <None Include="kskaulj20\.git\objects\8a\ae3ede025ea610c5873adc40aff0a94df69452" />
-    <None Include="kskaulj20\.git\objects\94\91a2fda28342ab358eaf234e1afe0c07a53d62" />
-    <None Include="kskaulj20\.git\objects\9b\123e2ecb3f1e34fddb6b9c05e71f096898f61e" />
-    <None Include="kskaulj20\.git\objects\9c\f5986edb1270df7431e5f75c5434ae88c81911" />
-    <None Include="kskaulj20\.git\objects\af\7dbebbacef595e3089c01c05671016c21a8304" />
-    <None Include="kskaulj20\.git\objects\b9\db953dacb70f948018ad17b89e6cfabbd212af" />
-    <None Include="kskaulj20\.git\objects\c2\ce7c02e946d0019215ff8bb1116a90a1654914" />
-    <None Include="kskaulj20\.git\objects\d7\3d29aaee90366df0c76d2cd61f22000b26c009" />
-    <None Include="kskaulj20\.git\objects\fc\a7a82d5ab1339b038d07c3cc00d1befe3e38f7" />
-    <None Include="kskaulj20\.git\refs\heads\master" />
-    <None Include="kskaulj20\.git\refs\remotes\origin\master" />
-    <None Include="kskaulj20\.vs\kskaulj20\v17\.suo" />
-    <None Include="kskaulj20\.vs\slnx.sqlite" />
-    <None Include="kskaulj20\.vs\VSWorkspaceState.json" />
-    <None Include="kskaulj20\App.config" />
-    <None Include="kskaulj20\bin\Debug\Evaluation Manager.exe.config" />
-    <None Include="kskaulj20\DBLayer\obj\Debug\DBLayer.csproj.AssemblyReference.cache" />
-    <None Include="kskaulj20\DBLayer\obj\Debug\DBLayer.csproj.CoreCompileInputs.cache" />
-    <None Include="kskaulj20\DBLayer\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="kskaulj20\Evaluation Manager.csproj" />
-    <None Include="kskaulj20\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="kskaulj20\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="kskaulj20\obj\Debug\Evaluation Manager.csproj.AssemblyReference.cache" />
-    <None Include="kskaulj20\obj\Debug\Evaluation Manager.csproj.CoreCompileInputs.cache" />
-    <None Include="kskaulj20\obj\Debug\Evaluation Manager.csproj.GenerateResource.cache" />
-    <None Include="kskaulj20\obj\Debug\Evaluation Manager.csproj.SuggestedBindingRedirects.cache" />
-    <None Include="kskaulj20\obj\Release\Evaluation Manager.csproj.AssemblyReference.cache" />
-    <None Include="kskaulj20\Properties\Settings.settings" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -184,31 +97,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="kskaulj20\.gitattributes" />
-    <Content Include="kskaulj20\.gitignore" />
-    <Content Include="kskaulj20\.git\ms-persist.xml" />
-    <Content Include="kskaulj20\bin\Debug\Evaluation Manager.exe" />
-    <Content Include="kskaulj20\bin\Debug\Evaluation Manager.pdb" />
-    <Content Include="kskaulj20\DBLayer\bin\Debug\DBLayer.dll" />
-    <Content Include="kskaulj20\DBLayer\bin\Debug\DBLayer.pdb" />
-    <Content Include="kskaulj20\DBLayer\DBLayer.dll" />
-    <Content Include="kskaulj20\DBLayer\obj\Debug\DBLayer.csproj.FileListAbsolute.txt" />
-    <Content Include="kskaulj20\DBLayer\obj\Debug\DBLayer.dll" />
-    <Content Include="kskaulj20\DBLayer\obj\Debug\DBLayer.pdb" />
-    <Content Include="kskaulj20\Evaluation Manager.sln" />
-    <Content Include="kskaulj20\obj\Debug\Evaluation Manager.csproj.FileListAbsolute.txt" />
-    <Content Include="kskaulj20\obj\Debug\Evaluation Manager.exe" />
-    <Content Include="kskaulj20\obj\Debug\Evaluation Manager.pdb" />
-    <Content Include="kskaulj20\obj\Debug\TempPE\EvaluationManagerDataSet.Designer.cs.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="kskaulj20\.git\objects\info\" />
-    <Folder Include="kskaulj20\.git\objects\pack\" />
-    <Folder Include="kskaulj20\.git\refs\tags\" />
-    <Folder Include="kskaulj20\.vs\Evaluation Manager\v17\" />
-    <Folder Include="kskaulj20\bin\Release\" />
-    <Folder Include="kskaulj20\DBLayer\bin\Release\" />
-    <Folder Include="kskaulj20\DBLayer\obj\Debug\TempPE\" />
+    <Content Include="Dlls\DBLayer.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
